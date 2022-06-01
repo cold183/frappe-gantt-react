@@ -1,16 +1,14 @@
 # Frappé Gantt React Wrapper
 
-It's a React Component, a Wrapper for the awesome [Gantt chart library](https://github.com/frappe/gantt) from Frappé
-
-For the live demo, you can check their live demo [here](https://frappe.github.io/gantt/)
+It's an updated React Component, a Wrapper for [Gantt chart library](https://github.com/frappe/gantt) from Frappé
 
 ## Install
 
-> npm install frappe-gantt-react
+> npm install @toyokoh/frappe-gantt-react
 
 or
 
-> yarn add frappe-gantt-react
+> yarn add @toyokoh/frappe-gantt-react
 
 ## Usage
 
