@@ -20,72 +20,47 @@ Using ES6 modules
 
 Or using CommonJS
 
-`const { FrappeGantt } = require('@toyokoh/frappe-gantt-react')`
+`const { FrappeGantt,ViewMode } = require('@toyokoh/frappe-gantt-react')`
+
+` const tasks = [ { id: "Task 1", name: "Redesign website", start: "2016-12-28", end: "2016-12-31", progress: 10, dependencies: "", }, { id: "Task 2", name: "Redesign website", start: "2016-12-28", end: "2016-12-31", progress: 20, dependencies: "Task 1", }, { id: "Task 3", name: "Redesign website", start: "2016-12-28", end: "2016-12-31", progress: 0, dependencies: "Task 2, Task 1", }, ];`
 
 Then you can use it in your react app:
 
-import { FrappeGantt, ViewMode } from "@toyokoh/frappe-gantt-react";
+    class App extends React.Component {
+        state = { mode: ViewMode.Month };
+        componentDidMount() {
+            console.log("test");
+            setTimeout(() => {
+                console.log("Setting State!");
+                this.setState({ mode: ViewMode.Week });
+                setTimeout(() => {
+                    console.log("Setting State!");
+                    this.setState({ mode: ViewMode.HalfDay });
+                }, 3000);
+            }, 3000);
+        }
 
-const tasks = [
-{
-id: "Task 1",
-name: "Redesign website",
-start: "2016-12-28",
-end: "2016-12-31",
-progress: 10,
-dependencies: "",
-},
-{
-id: "Task 2",
-name: "Redesign website",
-start: "2016-12-28",
-end: "2016-12-31",
-progress: 20,
-dependencies: "Task 1",
-},
-{
-id: "Task 3",
-name: "Redesign website",
-start: "2016-12-28",
-end: "2016-12-31",
-progress: 0,
-dependencies: "Task 2, Task 1",
-},
-];
+        render() {
 
-class App extends React.Component {
-state = { mode: ViewMode.Month };
+            return (
+                ...
+                <div>
+                    <FrappeGantt
+                        tasks={tasks}
+                        viewMode={this.state.mode}
+                        onClick={task => console.log(task)}
+                        onDateChange={(task, start, end) => console.log(task, start, end)}
+                        onProgressChange={(task, progress) => console.log(task, progress)}
+                        onTasksChange={tasks => console.log(tasks)}
+                    />
+                </div>
+                ...
 
-componentDidMount() {
-console.log("test");
+            )
 
-    setTimeout(() => {
-      console.log("Setting State!");
-      this.setState({ mode: ViewMode.Week });
+        }
 
-      setTimeout(() => {
-        console.log("Setting State!");
-        this.setState({ mode: ViewMode.HalfDay });
-      }, 3000);
-    }, 3000);
-
-}
-
-render() {
-return (
-<div>
-<FrappeGantt
-tasks={tasks}
-viewMode={this.state.mode}
-onClick={(task) => console.log(task)}
-onDateChange={(task, start, end) => console.log(task, start, end)}
-onProgressChange={(task, progress) => console.log(task, progress)}
-onTasksChange={(tasks) => console.log(tasks)}
-/>
-</div>
-);
-}
-}
+    }
 
 ## The API
 
