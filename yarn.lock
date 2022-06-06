@@ -3004,6 +3004,11 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
 
+"@toyokoh/frappe-gantt@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@toyokoh/frappe-gantt/-/frappe-gantt-1.0.4.tgz#22b7e053283585b6ea4afe0d351d23666889324f"
+  integrity sha512-XSe2ckHdN88RXg8Nb7UyfP9zLU9Sy1cZLYzGkLvxFiLlZ6m7ocYHqcCAWiWjYqMquYX4cbkx+jF48GQ9k31AHA==
+
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
@@ -7010,11 +7015,6 @@ fragment-cache@^0.2.1:
   integrity sha1-QpD60n8T6Jvn8zeZxrxaCr//DRk=
   dependencies:
     map-cache "^0.2.2"
-
-frappe-gantt@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/frappe-gantt/-/frappe-gantt-0.6.1.tgz#57ae0b5f024101fc7cd5ba92f605de97dba9c9a1"
-  integrity sha512-1cSU9vLbwypjzaxnCfnEE03Xr3HlAV2S8dRtjxw62o+amkx1A8bBIFd2jp84mcDdTCM77Ij4LzZBslAKZB8oMg==
 
 fresh@0.5.2:
   version "0.5.2"
