@@ -1,5 +1,5 @@
 import React, { createRef } from "react";
-import Gantt from "frappe-gantt";
+import Gantt from "@toyokoh/frappe-gantt";
 import { Moment } from "moment";
 import { Task } from "./Task";
 import { ViewMode } from "./ViewMode";
@@ -16,7 +16,7 @@ const frappeGanttDefaultProps = {
   onClick: (task: Task) => {},
   onDateChange: (task: Task, start: Moment, end: Moment) => {},
   onProgressChange: (task: Task, progress: number) => {},
-  onViewChange: (mode: ViewMode) => {}
+  onViewChange: (mode: ViewMode) => {},
 };
 
 export class FrappeGantt extends React.Component<FrappeGanttProps, any> {
@@ -28,13 +28,13 @@ export class FrappeGantt extends React.Component<FrappeGanttProps, any> {
 
   state = {
     viewMode: null,
-    tasks: []
+    tasks: [],
   };
 
   static getDerivedStateFromProps(nextProps: FrappeGanttProps, state: any) {
     return {
       viewMode: nextProps.viewMode,
-      tasks: nextProps.tasks.map(t => new Task(t))
+      tasks: nextProps.tasks.map((t) => new Task(t)),
     };
   }
 
@@ -56,7 +56,7 @@ export class FrappeGantt extends React.Component<FrappeGanttProps, any> {
       on_date_change: (task: Task, start: Moment, end: Moment) => {
         this.props.onDateChange!(task, start, end);
         this.props.onTasksChange!(this.props.tasks);
-      }
+      },
     });
 
     if (this._gantt) {
