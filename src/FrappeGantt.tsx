@@ -1,5 +1,5 @@
 import React, { createRef } from "react";
-import Gantt from "frappe-gantt";
+import Gantt from "@cold183/frappe-gantt";
 import { Moment } from "moment";
 import { Task } from "./Task";
 import { ViewMode } from "./ViewMode";

@@ -31,7 +31,7 @@
     "@mui/material": "^5.8.1",
     "@mui/styled-engine-sc": "^5.8.0",
     "@mui/x-data-grid": "^5.11.1",
-    "@toyokoh/frappe-gantt": "1.0.4",
+    "@cold183/frappe-gantt": "https://github.com/cold183/frappe-gantt.git",
     "moment": "^2.24.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
