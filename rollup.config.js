@@ -56,7 +56,7 @@ export default {
       presets: ["@babel/preset-react"],
       extensions: [".js", ".jsx", ".ts", ".tsx"],
       plugins: [
-        "@babel/plugin-proposal-object-rest-spread",
+        "@babel/plugin-transform-object-rest-spread",
         "@babel/plugin-proposal-optional-chaining",
         "@babel/plugin-syntax-dynamic-import",
         "@babel/plugin-proposal-class-properties",
