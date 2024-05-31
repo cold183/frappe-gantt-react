@@ -1,1 +1,1 @@
-declare module "@toyokoh/frappe-gantt";
+declare module "frappe-gantt";
